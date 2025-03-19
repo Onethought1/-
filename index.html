@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成果认证系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tabs.css">
+    <!-- 添加Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">成果认证系统</div>
+            
+            <div class="menu-item active" data-menu="personal">个人成果管理</div>
+            <div class="submenu show" id="personal-submenu" style="display: block;">
+                <div class="submenu-item active" data-content="personal-info">个人信息管理</div>
+                <div class="submenu-item" data-content="achievement-register">成果登记</div>
+                <div class="submenu-item" data-content="learning-archive">学习档案</div>
+                <div class="submenu-item" data-content="growth-portrait">成长画像</div>
+            </div>
+            
+            <div class="menu-item" data-menu="unit">单位成果管理</div>
+            <div class="submenu" id="unit-submenu">
+                <div class="submenu-item" data-content="achievement-entry">成果录入</div>
+                <div class="submenu-item" data-content="achievement-review">成果初审</div>
+                <div class="submenu-item" data-content="achievement-confirmation">成果认定</div>
+                <div class="submenu-item" data-content="certification-application">申报认证</div>
+            </div>
+            
+            <div class="menu-item" data-menu="statistics">成果统计分析</div>
+            <div class="submenu" id="statistics-submenu">
+                <div class="submenu-item" data-content="performance-evaluation" onclick="loadPerformanceEvaluationModule(document.getElementById('main-content'))">绩效评估</div>
+                <div class="submenu-item" data-content="statistical-analysis" onclick="loadStatisticsManagementModule(document.getElementById('main-content'))">统计分析</div>
+                <div class="submenu-item" data-content="achievement-display" onclick="loadAchievementDisplayModule(document.getElementById('main-content'))">成果展示</div>
+            </div>
+            
+            <div class="menu-item" data-menu="system">系统管理</div>
+            <div class="submenu" id="system-submenu">
+                <div class="submenu-item" data-content="account-management">账号权限管理</div>
+                <div class="submenu-item" data-content="log-management">用户日志管理</div>
+                <div class="submenu-item" data-content="dictionary-management">数据字典管理</div>
+                <div class="submenu-item" data-content="display-management">展板样式管理</div>
+            </div>
+            
+            <div class="menu-item" data-menu="template">成果模板管理</div>
+            <div class="submenu" id="template-submenu">
+                <div class="submenu-item" data-content="directory-management">成果名录管理</div>
+                <div class="submenu-item" data-content="template-management">模板样式管理</div>
+                <div class="submenu-item" data-content="sensitive-word">敏感词监控</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                个人信息管理
+            </div>
+            <div class="content" id="main-content">
+                <!-- 内容区域 - 由JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- 脚本文件 -->
+    <script src="main.js"></script>
+    
+    <!-- 加载一级模块脚本 -->
+    <script src="modules/personalManagement.js"></script>
+    <script src="modules/unitManagement.js"></script>
+    <script src="modules/statisticsManagement.js"></script>
+    <script src="modules/systemManagement.js"></script>
+    <script src="modules/templateManagement.js"></script>
+    
+    <!-- 加载个人成果管理子模块脚本 -->
+    <script src="modules/personalInfo.js"></script>
+    <script src="modules/achievementRegister.js"></script>
+    <script src="modules/learningArchive.js"></script>
+    <script src="modules/growthPortrait.js"></script>
+    
+    <!-- 加载单位成果管理子模块脚本 -->
+    <script src="modules/achievementEntry.js"></script>
+    <script src="modules/achievementReview.js"></script>
+    <script src="modules/achievementConfirmation.js"></script>
+    <script src="modules/certificationApplication.js"></script>
+    
+    <!-- 加载成果统计分析子模块脚本 -->
+    <script src="modules/performanceEvaluation.js"></script>
+    <script src="modules/statisticalAnalysis.js"></script>
+    <script src="modules/achievementDisplay.js"></script>
+    
+    <!-- 加载系统管理子模块脚本 -->
+    <script src="modules/accountManagement.js"></script>
+    <script src="modules/logManagement.js"></script>
+    <script src="modules/dictionaryManagement.js"></script>
+    <script src="modules/displayManagement.js"></script>
+    
+    <!-- 加载成果模板管理子模块脚本 -->
+    <script src="modules/directoryManagement.js"></script>
+    <script src="modules/templateStyleManagement.js"></script>
+    <script src="modules/sensitiveWordMonitor.js"></script>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+/* 标签页样式 */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.tab:hover {
+    color: #3498db;
+    border-bottom-color: #b2d7f5;
+}
+
+.tab.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.tab-content {
+    padding: 20px 0;
+    min-height: 400px;
+}
+
+/* 选项卡内容动画 */
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab-content > div {
+    animation: fadeEffect 0.5s;
+}
+
+/* 响应式标签页 */
+@media (max-width: 768px) {
+    .tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+} 
